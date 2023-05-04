@@ -3,6 +3,10 @@
   margin: 0; 
 }
 
+body {
+  height: 100%;
+}
+
 header {
   background-color: #94E4C2;
   padding: 2em; 

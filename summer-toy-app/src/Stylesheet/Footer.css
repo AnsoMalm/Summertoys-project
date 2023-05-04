@@ -37,12 +37,17 @@ footer {
 	color: white; 
   }
 
-  .social-icons-container a {
+  .icons-row {
+	display: flex;
+	justify-content: space-around;
+  }
+
+  .social-icons-container p {
 	visibility: hidden;
 }
 
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 500px) {
 	
 	footer {
 		display: flex; 
@@ -50,11 +55,25 @@ footer {
 		justify-content: space-around;
 		align-items: center;
 	}
+	.icons-row {
+		margin-top: 5em; 
+	}
+
+	.social-icons-container p {
+		margin-top: 2em; 
+		visibility:inherit;
+	}
 
 	.social-icons-container a {
 		color: white;
 		text-decoration: none;
-		visibility:inherit;
+	}
+	.admin-icon {
+		margin-left: 0.5em; 
+	}
+
+	.social-icons-container a:hover, .admin-icon:hover {
+		color: #94E4C2; 
 	}
 
   }
