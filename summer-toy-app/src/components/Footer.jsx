@@ -1,3 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faInstragram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+
 import { Link } from "react-router-dom"
 
 const Footer = () => (
@@ -18,11 +24,27 @@ const Footer = () => (
 					<p>Köpvillkor</p>
 			</div>
 			<div className="social-icons-container">
-				<img></img>
-				<img></img>
-				<img></img>
-				<Link to="admin-login">Admin Login</Link>
-				<img></img>
+				<div className="icons-row">
+					<FontAwesomeIcon
+						className="social-icon"
+						icon={faInstragram}
+					/>
+					<FontAwesomeIcon 
+						className="social-icon"
+						icon={faFacebook}
+					/>
+					<FontAwesomeIcon
+						className="social-icon"
+						icon={faTwitter}
+					/>
+				</div>
+					<p className="admin-login-text">
+					<Link to="admin-login">Admin Login</Link>
+						<FontAwesomeIcon
+							className="admin-icon"
+							icon={faRightToBracket}
+						/>
+					</p>
 			</div>	
 	</footer>
 )
