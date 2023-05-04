@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+
+
+header {
+	background-color: #94E4C2;
+	padding: 2em; 
+  }
+
+  .head-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+  }
+  .heading {
+	font-family: 'Julee', cursive;
+	color: #fcfaca;
+	font-size: 35px;
+  }
+
+  .hamburger-icon {
+	display: none;
+	background-color: red;
+  }
+
+  .nav-länkar {
+	font-size: 22px;
+  }
+
+  .nav-länkar a {
+	margin: 0em 0.3em 0em 1em; 
+	text-decoration: none;
+	color:#6d6b3c;
+	font-weight: bold;
+  }
+  .nav-länkar a:hover {
+	text-decoration: underline;
+  }
+
+/*Hamburgarmenyn*/
+.nav-hamburger-menu {
+	background-color: #94E4C2;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+  }
+  
+  .links-hamburger-menu {
+	list-style: none;
+	padding: 0;
+  }
+  
+  .links-hamburger-menu li {
+	margin-bottom: 1em;
+  }
+  
+  .links-hamburger-menu a {
+	color: #6d6b3c;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 22px;
+  }
+  
+  .links-hamburger-menu a:hover {
+	text-decoration: underline;
+  }
+
+  @media screen and (max-width: 767px) {
+
+	.nav-länkar {
+		display: none;
+	}
+
+	.hamburger-icon {
+		display: block;
+	}
+	.head-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.head-container a {
+		margin: 0 1em 0em 0em; 
+	}
+  }
