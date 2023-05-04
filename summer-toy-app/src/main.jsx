@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom' 
 import { router } from './routeConfig.jsx'
 import './index.css'
+import './Stylesheet/Footer.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   

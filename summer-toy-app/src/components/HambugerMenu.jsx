@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 
 const HamburgerMenu = () => {
-	const scrolldown = () => {
-		window.scrollTo({
-			top: document.body.scrollHeight - window.innerHeight, 
-			behavior: 'smooth'
-		});
-	}
+	// const scrolldown = () => {
+	// 	window.scrollTo({
+	// 		top: document.body.scrollHeight - window.innerHeight, 
+	// 		behavior: 'smooth'
+	// 	});
+	// }
 
 	return (
 		<nav className="nav-hamburger-menu">
