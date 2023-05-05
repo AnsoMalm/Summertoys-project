@@ -3,10 +3,10 @@
 
 header {
 	background-color: #94E4C2;
-	padding: 2em; 
+	padding: 1.5em; 
   }
 
-  .head-container {
+  .head-container-widescreen {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -15,7 +15,6 @@ header {
   .heading {
 	font-family: 'Julee', cursive;
 	color: #fcfaca;
-	font-size: 35px;
   }
 
   .hamburger-icon {
@@ -38,7 +37,7 @@ header {
   }
 
 /*Hamburgarmenyn*/
-.nav-hamburger-menu {
+/*.nav-hamburger-menu {
 	background-color: #94E4C2;
 	position: absolute;
 	top: 100%;
@@ -70,18 +69,18 @@ header {
   
   .links-hamburger-menu a:hover {
 	text-decoration: underline;
-  }
+  }*/
 
   @media screen and (max-width: 767px) {
 
-	.nav-länkar {
+/*	.nav-länkar {
 		display: none;
 	}
 
 	.hamburger-icon {
 		display: block;
-	}
-	.head-container {
+	}*/
+	.head-container-widescreen {
 		display: flex;
 		flex-wrap: wrap;
 	}

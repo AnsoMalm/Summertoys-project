@@ -5,6 +5,7 @@ import { router } from './routeConfig.jsx'
 import './index.css'
 import './Stylesheet/Footer.css'
 import './Stylesheet/Header.css'
+import './Stylesheet/Home.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
