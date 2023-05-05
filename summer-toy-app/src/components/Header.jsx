@@ -3,7 +3,7 @@ import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import HamburgerMenu from "./HambugerMenu.jsx"
 import { useState } from "react"
-import { NavLink } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 
 const Header = () => {
@@ -21,7 +21,7 @@ const Header = () => {
 	return (
 		<header>
 			<div className="head-container-widescreen">
-				<h1 className="heading">Strandleksparadiset</h1>
+				<h1 className="heading">Strandleksparadiset</h1>		
 				<div className="nav-länkar">
 					<FontAwesomeIcon
 						className="hamburger-icon"

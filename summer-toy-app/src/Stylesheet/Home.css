@@ -32,6 +32,14 @@ p {
 
 }
 
+.photo-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
 .text-container {
 	display: flex;
 	flex-direction: column;
@@ -64,4 +72,40 @@ p {
 	width: 90%; 
 	margin: 1em 1em; 
 	border-radius: 20px;
+}
+
+@media screen and (min-width: 500px) {
+
+	.photo-container-girl .girl-swimsuit  {
+		display: flex; 
+		flex-direction: row;
+		max-width: 500px; 
+		min-height: 700px; 
+	}
+
+	section {
+		display: flex; 
+		flex-direction: row;
+	}
+
+	.photo-container {
+		margin-top: 3em; 
+	}
+
+	.photo-container .buckets {
+		max-width: 400px;
+		height: 300px; 
+	}
+
+	.photo-container .beachplay {
+		max-width: 400px;
+		height: 300px; 
+	}
+	.text-container {
+		max-width: 200px;
+		max-height: 100px; 
+	}
+
+
+
 }

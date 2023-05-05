@@ -6,6 +6,7 @@ import './index.css'
 import './Stylesheet/Footer.css'
 import './Stylesheet/Header.css'
 import './Stylesheet/Home.css'
+import './Stylesheet/AdminLogin.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
