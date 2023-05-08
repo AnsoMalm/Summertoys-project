@@ -8,6 +8,7 @@ import './Stylesheet/Header.css'
 import './Stylesheet/Home.css'
 import './Stylesheet/AdminLogin.css'
 import './Stylesheet/Product.css'
+import './Stylesheet/ProductDetails.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
