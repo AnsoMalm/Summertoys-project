@@ -25,10 +25,6 @@ async function addAllProducts() {
 		shopId: shopId
 	})); 
 	console.log(products)
-
-	products.forEach(product => {
-		addAllProducts(product)
-	})
 }
 
 addAllProducts();

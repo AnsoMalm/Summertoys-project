@@ -1,3 +1,5 @@
+import { url, shopId} from './constants.js'
+
 export const Productdata = [
 	{
 		action: 'add-product',
