@@ -17,14 +17,18 @@ async function addProduct(oneProduct) {
 
 async function addAllProducts() {
 	const products = Productdata.map(product => ({
-		picture: product.img, 
+		picture: product.picture, 
 		name: product.name, 
 		description: product.description, 
 		price: product.price, 
 		action: 'add-product',
-		shopId: shopId
+		shopid: shopId
 	})); 
 	console.log(products)
+
+	products.forEach(product => {
+		addProduct(product)
+	})
 }
 
 addAllProducts();

@@ -80,14 +80,15 @@ p {
 		display: flex; 
 		flex-direction: row;
 		max-width: 500px; 
-		min-height: 700px; 
+		max-height: 700px; 
 	}
 
-	section {
+	.photos {
 		display: flex; 
 		flex-direction: row;
-	}
-
+		justify-content: center;
+		align-items: center;
+		}
 	.photo-container {
 		margin-top: 3em; 
 	}
