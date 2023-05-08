@@ -76,35 +76,47 @@ p {
 
 @media screen and (min-width: 500px) {
 
-	.photo-container-girl .girl-swimsuit  {
-		display: flex; 
-		flex-direction: row;
-		max-width: 500px; 
-		max-height: 700px; 
+	article {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
-	.photos {
-		display: flex; 
+	article .summer-picture {
+		width: 90%;
+		height: 460px; 
+	}
+
+
+	.photo-container-girl .girl-swimsuit  {
+		max-width: 800px; 
+		max-height: 900px; 
+	} 
+
+	section .photos {
+		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		}
+	}
+
 	.photo-container {
 		margin-top: 3em; 
 	}
 
 	.photo-container .buckets {
-		max-width: 400px;
-		height: 300px; 
+		max-width: 320px;
+		max-height: 270px; 
 	}
 
 	.photo-container .beachplay {
-		max-width: 400px;
-		height: 300px; 
+		max-width: 320px;
+		max-height: 270px; 
 	}
 	.text-container {
-		max-width: 200px;
-		max-height: 100px; 
+		max-width: 20em;
+		max-height: 10em; 
 	}
 
 

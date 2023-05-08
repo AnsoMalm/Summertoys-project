@@ -19,6 +19,7 @@ const Home = () => {
 				<p>Vi har olika leksaker att erbjuda för strandbesöket både för stora och små.</p>
 		</article>
 		<section>
+			<div className='photos'>
 			<div className="photo-container-girl">
 				<img src={SummerGirl} alt="Girl with swimsuit and inflateted duck" className='girl-swimsuit'
 				/>
@@ -36,6 +37,7 @@ const Home = () => {
 				className='beachplay'
 				/>
 			</div>
+		</div>
 		</section>
 	</main>
 	)
