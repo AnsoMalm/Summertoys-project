@@ -28,8 +28,8 @@ const Header = () => {
 						icon={faShoppingBag}
 						onClick={showNav}
 					/>
-					<NavLink to="våra-produkter">Våra Produkter</NavLink>
-					<NavLink to="varukorg">Varukorg</NavLink>
+					<NavLink to="products">Våra Produkter</NavLink>
+					<NavLink to="cart">Varukorg</NavLink>
 					<FontAwesomeIcon 
 						className="shopping-cart"
 						icon={faBasketShopping}

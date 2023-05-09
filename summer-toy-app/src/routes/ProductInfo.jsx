@@ -13,7 +13,7 @@ const ProductDetails = () => {
 			<section className="error-field">
 				<h2>No product</h2>
 				<p>Please check the URL again</p>
-				<p><Link to="/våra-produkter">Tillbaka till våra produkter</Link></p>
+				<p><Link className="back-to-produkt" to="/products">Tillbaka till våra produkter</Link></p>
 			</section>
 		)
 	}
@@ -27,7 +27,7 @@ const ProductDetails = () => {
 					<p className="product-descript">{product.description}</p>
 					<p className="product-price">{product.price}kr</p>
 
-					<p><Link className="back-to-produkt" to="/våra-produkter">Tillbaka till produktsidan</Link></p>
+					<p><Link className="back-to-produkt" to="/products">Tillbaka till produktsidan</Link></p>
 				</div>
 		</section>
 

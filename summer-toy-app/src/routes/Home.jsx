@@ -29,7 +29,7 @@ const Home = () => {
 				/>
 				<div className='text-container'>
 					<p>Vill du se mer produkter?</p>
-					<Link to="/våra-produkter">
+					<Link to="/products">
 					<button className='product-button'>Klicka här!</button>
 					</Link>
 				</div>

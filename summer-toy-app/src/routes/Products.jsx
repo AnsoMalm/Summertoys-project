@@ -38,7 +38,7 @@ const Products = () => {
 					/>
 					<p className="products-title"> {name}	
 					</p>
-					<Link to={`/product/${id}`}>Mer info om produkt</Link>
+					<Link to={`/products/${id}`}>Mer info om produkt</Link>
 					<div className="products-price">
 						<p className="price">{price}kr</p>
 					</div>

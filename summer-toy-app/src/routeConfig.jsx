@@ -5,7 +5,8 @@ import Products, {loader as ProductsLoader} from "./routes/Products.jsx";
 import ProductDetails from "./routes/ProductInfo.jsx";
 import ShoppingCart from "./routes/ShoppingCart.jsx";
 import AdminLogin from "./routes/AdminLogin.jsx";
-import AdminPage from "./routes/AdminPage.jsx";
+import AdminUser from "./routes/AdminUser.jsx";
+
 
 
 export const router = createHashRouter([
@@ -18,29 +19,34 @@ export const router = createHashRouter([
 				element: <Home />
 			}, 
 			{
-				path: 'våra-produkter', 
+				path: 'products', 
 				element: <Products />, 
 				loader: ProductsLoader, 
 			},
 			{
-				path: 'product/:id',
+				path: 'products/:id',
 				element: <ProductDetails />,
 				loader: ProductsLoader,
 			},
 			{
-				path: 'varukorg', 
+				path: 'cart', 
 				element: <ShoppingCart />,
 			}, 
 			{
-				path: 'admin-login', 
+				path: 'admin', 
 				element: <AdminLogin />,
-				children: [
-					{
-						path: 'admin-sida',
-						element: <AdminPage />
-					},
-				]
 			},
+			{	
+				path: 'admin/users',
+				element: <AdminUser />,
+		
+			},
+			
+			
+			// {
+			// 	path: 'admin/products',
+			// 	element: <AdminProducts />
+			// },
 		
 		]
 	}
