@@ -10,10 +10,14 @@ import './Stylesheet/AdminLogin.css'
 import './Stylesheet/Product.css'
 import './Stylesheet/ProductDetails.css'
 import './Stylesheet/AdminUser.css'
+import './Stylesheet/ShoppingsCart.css'
+import { RecoilRoot } from 'recoil'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
   <React.StrictMode>
+      <RecoilRoot>
       <RouterProvider router={router} />
+      </RecoilRoot>
   </React.StrictMode>,
 )

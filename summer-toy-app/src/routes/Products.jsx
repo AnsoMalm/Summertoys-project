@@ -1,4 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useRecoilState } from 'recoil'
+import { cartState } from '../data/cartState.js'
 import { getProducts } from "../data/getProduct.js"
 import { useLoaderData } from "react-router"
 import { useState } from "react"
@@ -10,6 +12,36 @@ export const loader = () => getProducts()
 const Products = () => {
 	const productData = useLoaderData()
 	const [searchValue, setSearchValue] = useState(''); 
+	const [cart, setCart] = useRecoilState(cartState); 
+
+	const addToCart = (product) => {
+		let cartItem = {
+			id: product.id,
+			amount: 1,
+			name: product.name,
+			price: product.price, 
+		} 
+		console.log(cartItem)
+
+		let exitsCartItem = cart.find((item) => item.id === cartItem.id)
+		if(exitsCartItem) {
+
+			const updatedCart = cart.map((item) => {
+				if(item.id === cartItem.id) {
+					return {
+						...item, 
+						amount: item.amount + 1
+					}
+				} else {
+					return item;
+				} 
+			});
+			setCart(updatedCart)
+		} else {
+			const updatedCart = [ ...cart, cartItem];
+				setCart(updatedCart)
+		}
+	}
 
 	const handleChange = (event) => {
 		setSearchValue(event.target.value)
@@ -42,7 +74,7 @@ const Products = () => {
 					<div className="products-price">
 						<p className="price">{price}kr</p>
 					</div>
-					<button className="buy-button">Köp</button>
+					<button className="buy-button" onClick={() => addToCart({id, name, price})}>Köp</button>
 				</div>
 
 				))}
