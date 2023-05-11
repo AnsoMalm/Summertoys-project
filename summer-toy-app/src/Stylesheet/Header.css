@@ -13,17 +13,18 @@ header {
 	justify-content: space-between;
   }
   .heading {
+	margin: 0.3em 1em;
 	font-family: 'Julee', cursive;
 	color: #fcfaca;
   }
 
   .nav-länkar {
-	font-size: 20px;
+	font-size: 18px;
 	list-style: none;
   }
 
   .nav-länkar a {
-	margin: 0em 0.3em 0em 0.5em;
+	margin: 0em 0.3em 0em 1em;
 	text-decoration: none;
 	color:#6d6b3c;
 	font-weight: bold;
@@ -37,9 +38,19 @@ header {
 
 	.head-container-widescreen {
 		display: flex;
+		flex-direction: row;
+		align-items: center;
 		flex-wrap: wrap;
 	}
 	.head-container a {
 		margin: 0 1em 0em 0em; 
 	}
+
   }
+
+  /* .head-container-widescreen {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+  } */

@@ -18,7 +18,6 @@ const Header = () => {
 						icon={faCartShopping}
 						/>
 				</div>
-
 			</div>
 		</header>
 	)
