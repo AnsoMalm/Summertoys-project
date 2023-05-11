@@ -17,17 +17,13 @@ header {
 	color: #fcfaca;
   }
 
-  .hamburger-icon {
-	display: none;
-	background-color: red;
-  }
-
   .nav-länkar {
-	font-size: 22px;
+	font-size: 20px;
+	list-style: none;
   }
 
   .nav-länkar a {
-	margin: 0em 0.3em 0em 1em; 
+	margin: 0em 0.3em 0em 0.5em;
 	text-decoration: none;
 	color:#6d6b3c;
 	font-weight: bold;
@@ -36,50 +32,9 @@ header {
 	text-decoration: underline;
   }
 
-/*Hamburgarmenyn*/
-/*.nav-hamburger-menu {
-	background-color: #94E4C2;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	z-index: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 1em;
-  }
-  
-  .links-hamburger-menu {
-	list-style: none;
-	padding: 0;
-  }
-  
-  .links-hamburger-menu li {
-	margin-bottom: 1em;
-  }
-  
-  .links-hamburger-menu a {
-	color: #6d6b3c;
-	font-weight: bold;
-	text-decoration: none;
-	font-size: 22px;
-  }
-  
-  .links-hamburger-menu a:hover {
-	text-decoration: underline;
-  }*/
 
   @media screen and (max-width: 767px) {
 
-/*	.nav-länkar {
-		display: none;
-	}
-
-	.hamburger-icon {
-		display: block;
-	}*/
 	.head-container-widescreen {
 		display: flex;
 		flex-wrap: wrap;

@@ -58,7 +58,7 @@ const Products = () => {
 				onChange={handleChange}
 				className="search-input"
 				type="text"
-				placeholder="Sök på produkt"
+				placeholder="Sök på produkt..."
 			/>
 
 			<div className="grid-container">
@@ -74,7 +74,7 @@ const Products = () => {
 					<div className="products-price">
 						<p className="price">{price}kr</p>
 					</div>
-					<button className="buy-button" onClick={() => addToCart({id, name, price})}>Köp</button>
+					<button className="buy-button" onClick={() => addToCart({id, name, price})}>Lägg till</button>
 				</div>
 
 				))}
