@@ -19,7 +19,8 @@ const Products = () => {
 			id: product.id,
 			amount: 1,
 			name: product.name,
-			price: product.price, 
+			price: product.price,
+			picture: product.picture, 
 		} 
 		console.log(cartItem)
 
@@ -74,7 +75,7 @@ const Products = () => {
 					<div className="products-price">
 						<p className="price">{price}kr</p>
 					</div>
-					<button className="buy-button" onClick={() => addToCart({id, name, price})}>Lägg till</button>
+					<button className="buy-button" onClick={() => addToCart({id, picture, name, price})}>Lägg till</button>
 				</div>
 
 				))}

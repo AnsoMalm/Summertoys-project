@@ -41,6 +41,7 @@ const ShoppingCart = () => {
 			<div className="shoppingcart-container">
 						{cart.map((product, id) => (
 						<div className="product-container" key={id}>
+							<img className="product-image" src={product.picture} alt={product.name} />
 							<h3 className="heading-cart">{product.name}</h3>
 							<FontAwesomeIcon
 							className="minus-icon" 
