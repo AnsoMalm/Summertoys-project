@@ -6,6 +6,7 @@ import Beachplay from '../assets/img/plastic-children-toys-sandpit-outdoor.jpg'
 /*Andra importer*/
 import { Link } from 'react-router-dom'
 
+
 const Home = () => {
 	
 	return (
@@ -18,8 +19,8 @@ const Home = () => {
 				<p>Strandleksaker för lata dagar i solen.</p>
 				<p>Vi har olika leksaker att erbjuda för strandbesöket både för stora och små.</p>
 		</article>
-		<section>
-			<div className='photos'>
+		<section className="section-container">
+			<div className="photos">
 			<div className="photo-container-girl">
 				<img src={SummerGirl} alt="Girl with swimsuit and inflateted duck" className='girl-swimsuit'
 				/>
