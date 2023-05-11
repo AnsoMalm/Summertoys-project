@@ -1,6 +1,6 @@
 
 .admin-form-title {
-	padding: 1em; 
+	padding: 0.3em; 
 }
 
 .adminFormBtn {
@@ -22,7 +22,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	padding: 5em 3em;  
+	padding: 4em 2em;  
 	width: 20em; 
 	height: 30em; 
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;

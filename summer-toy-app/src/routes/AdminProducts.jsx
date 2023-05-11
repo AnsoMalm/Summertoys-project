@@ -120,13 +120,13 @@ const AdminProducts = () => {
 					{!descriptionValid && <div className="error-message-admin">{descriptionError}</div>}
 
 				<div className="admin-form">
-					<label className="admin-heading">Pris:</label> <br />
+					<label className="admin-heading">Pris: </label> <br />
 					<input
 						type="text"
 						value={productPrice}
 						onChange={handlePriceChange}
 						// onBlur={handlePriceBlur}
-						placeholder="121 kr"
+						placeholder="ex. 121"
 						className="admin-input-price"
 					/>
 				</div>
@@ -134,9 +134,7 @@ const AdminProducts = () => {
 
 				<button className="adminFormBtn" onClick={handleSubmit}>Lägg till</button>
 
-
 			</form>
-
 		</section>
 	)
 }

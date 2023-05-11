@@ -17,7 +17,7 @@ const Footer = () => (
 					</p>
 			</div>
 			<div className="contact-links-container">
-					<Link to="">Till startsida</Link>
+					<Link className="start-page" to="">Till startsida</Link>
 					<p>Om oss</p>
 					<p>Vanliga frågor</p>
 					<p>Köpvillkor</p>

@@ -1,0 +1,29 @@
+
+.admin-choices-container {
+	padding: 1em; 
+	display: flex; 
+	flex-direction: column; 
+	justify-content: center;
+	align-items: center;
+
+}
+
+.choice-heading {
+	padding: 1em; 
+}
+
+.admin-log-out {
+	background-color: rgb(164, 179, 164); 
+	padding: 0.3em 1em; 
+	border-radius: 1em; 
+	border: none; 
+	cursor: pointer;
+}
+
+.admin-links {
+	padding: 1em; 
+	margin-top: 1em; 
+}
+.admin-links a {
+	padding: 1em; 
+}

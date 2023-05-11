@@ -19,6 +19,14 @@ footer {
 	list-style-type: none;
   }
 
+  footer a {
+	font-weight: bold;
+  }
+  footer a:hover {
+	font-weight: bold;
+	color: #94E4C2;
+  }
+
   .contact-info {
 	padding: 0.5em; 
   }
@@ -46,8 +54,19 @@ footer {
 	visibility: hidden;
 }
 
+.social-icon {
+	width: 30px; 
+	height: 20px; 
 
-  @media screen and (min-width: 500px) {
+}
+
+.social-icon:hover {
+	color: #94E4C2;
+	cursor: pointer;
+}
+
+
+  @media screen and (min-width: 533px) {
 	
 	footer {
 		display: flex; 
@@ -72,8 +91,14 @@ footer {
 		margin-left: 0.5em; 
 	}
 
-	.social-icons-container a:hover, .admin-icon:hover {
+	.social-icons-container a:hover{
 		color: #94E4C2; 
+	}
+	.social-icon {
+		margin: 0.3em; 
+		width: 40px; 
+		height: 30px; 
+	
 	}
 
   }

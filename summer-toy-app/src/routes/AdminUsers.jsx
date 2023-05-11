@@ -4,7 +4,7 @@ const AdminUsers = () => {
 
 	return (
 		<section className="admin-inlog">
-		<h1>Här finns alla inloggade på sidan</h1>
+		<h1>Här är listan på alla som är inloggade</h1>
 		<Outlet />
 		</section>
 	)
