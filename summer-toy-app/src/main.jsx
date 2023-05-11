@@ -9,7 +9,7 @@ import './Stylesheet/Home.css'
 import './Stylesheet/AdminLogin.css'
 import './Stylesheet/Product.css'
 import './Stylesheet/ProductDetails.css'
-import './Stylesheet/AdminUser.css'
+import './Stylesheet/AdminProducts.css'
 import './Stylesheet/ShoppingsCart.css'
 import { RecoilRoot } from 'recoil'
 

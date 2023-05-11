@@ -38,7 +38,7 @@ const Footer = () => (
 					/>
 				</div>
 					<p className="admin-login-text">
-					<Link to="admin">Admin Login</Link>
+					<Link to="login">Admin Login</Link>
 						<FontAwesomeIcon
 							className="admin-icon"
 							icon={faRightToBracket}

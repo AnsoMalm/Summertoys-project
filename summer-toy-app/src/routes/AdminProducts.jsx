@@ -1,9 +1,8 @@
-
 import React, { useState } from "react"
-import { isValidProductName, isValidProductDescription, isValidUrl, isValidProductPrice } from "../utils/validatorAdminForm";
+// import { isValidProductName, isValidProductDescription, isValidUrl, isValidProductPrice } from "../utils/validatorAdminForm";
+import { addProduct } from "../data/addProduct";
 
-const AdminUser = () => {
-
+const AdminProducts = () => {
 	//Image -url
 	const [image, setImage] = useState('');
 	const [imageValid, setImageValid] = useState(true);
@@ -13,11 +12,11 @@ const AdminUser = () => {
 		setImage(event.target.value);
 	  };
 	
-	  const handleImageBlur = () => {
-		const [isValid, errorMessage] = isValidUrl(image);
-		setImageValid(isValid);
-		setImageError(errorMessage);
-	  };
+	//   const handleImageBlur = () => {
+	// 	const [isValid, errorMessage] = isValidUrl(image);
+	// 	setImageValid(isValid);
+	// 	setImageError(errorMessage);
+	//   };
 	
 	//Title på produkten
 	const [title, setTitle] = useState('');
@@ -28,11 +27,11 @@ const AdminUser = () => {
 		setTitle(event.target.value);
 	  };
 	
-	  const handleTitleBlur = () => {
-		const [isValid, errorMessage] = isValidProductName(title);
-		setTitleValid(isValid);
-		setTitleError(errorMessage);
-	  };
+	//   const handleTitleBlur = () => {
+	// 	const [isValid, errorMessage] = isValidProductName(title);
+	// 	setTitleValid(isValid);
+	// 	setTitleError(errorMessage);
+	//   };
 	
 	//Description
 	const [description, setDescription] = useState('');
@@ -43,11 +42,11 @@ const AdminUser = () => {
 		setDescription(event.target.value);
 	  };
 	
-	  const handleDiscriptionBlur = () => {
-		const [isValid, errorMessage] = isValidProductDescription(title);
-		setDescriptionValid(isValid);
-		setDescriptionError(errorMessage);
-	  };
+	//   const handleDiscriptionBlur = () => {
+	// 	const [isValid, errorMessage] = isValidProductDescription(title);
+	// 	setDescriptionValid(isValid);
+	// 	setDescriptionError(errorMessage);
+	//   };
 
 	//ProductPrice
 	const [productPrice, setProductPrice] = useState('');
@@ -58,51 +57,18 @@ const AdminUser = () => {
 		setProductPrice(event.target.value);
 	  };
 	
-	  const handlePriceBlur = () => {
-		const [isValid, errorMessage] = isValidProductPrice(title);
-		setPriceValid(isValid);
-		setPriceError(errorMessage);
-	  };
+	//   const handlePriceBlur = () => {
+	// 	const [isValid, errorMessage] = isValidProductPrice(title);
+	// 	setPriceValid(isValid);
+	// 	setPriceError(errorMessage);
+	//   };
 
 
-	// //Titel på produkt
-	// const handleTitleChange = (event) => {
-	// 	setTitle(event.target.value)
-	// 	const [isValid, errorMessage] = isValidProductName(event.target.value);
-	// 	setTitleErrorMessage(isValid ? '' : errorMessage);
-	// }
-	// const handleTitleBlur = () => {
-	// 	const [isValid, errorMessage] = 
-	// 	isValidProductName(title); 
-	// 	setTitleErrorMessage(errorMessage)
-	// }
+	const handleSubmit = () => {
+		event.preventDefault()
+		addProduct(image, title, description, productPrice)
 
-	// //Beskrivning i textarea
-	// const handleDescriptionChange = (event) => {
-	// 	setDescription(event.target.value)
-	// 	const [isValid, errorMessage] = isValidProductDescription(event.target.value);
-	// 	setDescriptionErrorMessage(isValid ? '' : errorMessage);
-	// }
-	// const handleDescriptionBlur = () => {
-	// 	const [isValid, errorMessage] = isValidProductDescription(description);
-	// 	setDescriptionErrorMessage(errorMessage);
-	// };
-	
-	// //Priset på admin
-	// const handlePriceChange = (event) => {
-	// 	setProductPrice(event.target.value)
-	// 	const [isValid, errorMessage] = isValidProductPrice(event.target.value);
-	// 	setPriceErrorMessage(isValid ? '' : errorMessage);
-	// }
-	// const handlePriceBlur = () => {
-	// 	const [isValid, errorMessage] = isValidProductPrice(productPrice);
-	// 	setPriceErrorMessage(errorMessage);
-	// };
-
-	function handleSubmit(event) {
-		event.preventDefualt();
-
-		//skicka formuläret till servern 
+		//skicka bilden till servern 
 	} 
 
 
@@ -110,10 +76,6 @@ const AdminUser = () => {
 
 	return (
 		<section className="admin-page">
-			<div className="heading-container">
-				<h2 className="admin-name">Admin User</h2>
-				<button className="admin-button">Logga ut</button>
-			</div>
 
 			<form onSubmit={handleSubmit} className="admin-container">
 				<h2 className="admin-form-title"> Lägga till en ny produkt</h2>
@@ -123,7 +85,7 @@ const AdminUser = () => {
 						type="text"
 						value={image}
 						onChange={handleImageChange}
-						onBlur={handleImageBlur}
+						// onBlur={handleImageBlur}
 						placeholder="http://..."
 						className="admin-input"
 					/>
@@ -136,7 +98,7 @@ const AdminUser = () => {
 						type="text"
 						value={title}
 						onChange={handleTitleChange}
-						onBlur={handleTitleBlur}
+						// onBlur={handleTitleBlur}
 						placeholder="Namnet på produkten"
 						className="admin-input"
 					/>
@@ -149,7 +111,7 @@ const AdminUser = () => {
 						type="text"
 						value={description}
 						onChange={handleDescriptionChange}
-						onBlur={handleDiscriptionBlur}
+						// onBlur={handleDiscriptionBlur}
 						placeholder="Beskrivning av er produkt..."
 						cols="30"
 						rows="10"
@@ -163,14 +125,14 @@ const AdminUser = () => {
 						type="text"
 						value={productPrice}
 						onChange={handlePriceChange}
-						onBlur={handlePriceBlur}
+						// onBlur={handlePriceBlur}
 						placeholder="121 kr"
 						className="admin-input-price"
 					/>
 				</div>
 					{!priceValid && <div className="error-message-admin">{priceError}</div> }
 
-				<button className="adminFormBtn">Lägg till</button>
+				<button className="adminFormBtn" onClick={handleSubmit}>Lägg till</button>
 
 
 			</form>
@@ -179,4 +141,4 @@ const AdminUser = () => {
 	)
 }
 
-export default AdminUser
+export default AdminProducts

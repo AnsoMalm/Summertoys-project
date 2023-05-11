@@ -26,7 +26,7 @@ const AdminLogin = (props) => {
 			setIsUserNameCorrect(true);
 			// props.setShowAdminPage(true);
 			//closeLogin();
-			navigate('users')
+			navigate('/admin')
 		} else {
 			if (password !== correctPassword) {
 				setIsPasswordCorrect(false)
