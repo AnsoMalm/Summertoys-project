@@ -1,8 +1,9 @@
 import React, { useState} from "react"
-// import { isValidProductName, isValidProductDescription, isValidUrl, isValidProductPrice } from "../utils/validatorAdminForm";
+import { isValidProductName, isValidProductDescription, isValidUrl, isValidProductPrice } from "../utils/validatorAdminForm";
 import { addProduct } from "../data/addProduct";
 import { getProducts } from "../data/getProduct";
 import { useLoaderData, Link } from "react-router-dom";
+import { deleteOneProduct } from "../data/DeleteProduct";
 
 export const loader = () => getProducts()
 
@@ -17,13 +18,13 @@ const AdminProducts = () => {
 		setImage(event.target.value);
 	  };
 	
-	//   const handleImageBlur = () => {
-	// 	const [isValid, errorMessage] = isValidUrl(image);
-	// 	setImageValid(isValid);
-	// 	setImageError(errorMessage);
-	//   };
+	  const handleImageBlur = () => {
+		const [isValid, message] = isValidUrl(image);
+		setImageValid(isValid);
+		setImageError(message);
+	  };
 	
-	//Title på produkten
+	//Title till produkten
 	const [title, setTitle] = useState('');
 	const [titleValid, setTitleValid] = useState(true);
 	const [titleError, setTitleError] = useState('');
@@ -32,11 +33,11 @@ const AdminProducts = () => {
 		setTitle(event.target.value);
 	  };
 	
-	//   const handleTitleBlur = () => {
-	// 	const [isValid, errorMessage] = isValidProductName(title);
-	// 	setTitleValid(isValid);
-	// 	setTitleError(errorMessage);
-	//   };
+	  const handleTitleBlur = () => {
+		const [isValid, errorMessage] = isValidProductName(title);
+		setTitleValid(isValid);
+		setTitleError(errorMessage);
+	  };
 	
 	//Description
 	const [description, setDescription] = useState('');
@@ -47,11 +48,11 @@ const AdminProducts = () => {
 		setDescription(event.target.value);
 	  };
 	
-	//   const handleDiscriptionBlur = () => {
-	// 	const [isValid, errorMessage] = isValidProductDescription(title);
-	// 	setDescriptionValid(isValid);
-	// 	setDescriptionError(errorMessage);
-	//   };
+	  const handleDiscriptionBlur = () => {
+		const [isValid, errorMessage] = isValidProductDescription(title);
+		setDescriptionValid(isValid);
+		setDescriptionError(errorMessage);
+	  };
 
 	//ProductPrice
 	const [productPrice, setProductPrice] = useState('');
@@ -62,19 +63,24 @@ const AdminProducts = () => {
 		setProductPrice(event.target.value);
 	  };
 	
-	//   const handlePriceBlur = () => {
-	// 	const [isValid, errorMessage] = isValidProductPrice(title);
-	// 	setPriceValid(isValid);
-	// 	setPriceError(errorMessage);
-	//   };
+	  const handlePriceBlur = () => {
+		const [isValid, errorMessage] = isValidProductPrice(title);
+		setPriceValid(isValid);
+		setPriceError(errorMessage);
+	  };
 
 
 	const handleSubmit = () => {
 		event.preventDefault()
 		addProduct(image, title, description, productPrice)
 
-		//skicka bilden till servern 
+		//skicka datan till servern 
 	} 
+
+	const handleDelete = async (productId) => {
+		await deleteOneProduct(productId);
+
+	}
 
 
 
@@ -85,12 +91,12 @@ const AdminProducts = () => {
 			<form onSubmit={handleSubmit} className="admin-container">
 				<h2 className="admin-form-title"> Lägga till en ny produkt</h2>
 				<div className="admin-form">
-					<label className="admin-heading">Bild:</label> <br />
+					<label className="admin-heading">Lägg till bild:</label> <br />
 					<input
-						type="text"
+						type="url"
 						value={image}
 						onChange={handleImageChange}
-						// onBlur={handleImageBlur}
+						onBlur={handleImageBlur}
 						placeholder="http://..."
 						className="admin-input"
 					/>
@@ -103,7 +109,7 @@ const AdminProducts = () => {
 						type="text"
 						value={title}
 						onChange={handleTitleChange}
-						// onBlur={handleTitleBlur}
+						onBlur={handleTitleBlur}
 						placeholder="Namnet på produkten"
 						className="admin-input"
 					/>
@@ -116,7 +122,7 @@ const AdminProducts = () => {
 						type="text"
 						value={description}
 						onChange={handleDescriptionChange}
-						// onBlur={handleDiscriptionBlur}
+						onBlur={handleDiscriptionBlur}
 						placeholder="Beskrivning av er produkt..."
 						cols="30"
 						rows="10"
@@ -130,7 +136,7 @@ const AdminProducts = () => {
 						type="text"
 						value={productPrice}
 						onChange={handlePriceChange}
-						// onBlur={handlePriceBlur}
+						onBlur={handlePriceBlur}
 						placeholder="ex. 121"
 						className="admin-input-price"
 					/>
@@ -152,7 +158,7 @@ const AdminProducts = () => {
 							<p className="price"> {price} kr</p>
 						</div>
 							<button
-							className="remove-button">Ta bort</button>
+							className="remove-button" onClick={() => handleDelete(id)}>Ta bort</button>
 					</div>
 				))}
 

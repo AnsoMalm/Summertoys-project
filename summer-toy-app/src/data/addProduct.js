@@ -20,7 +20,7 @@ export async function addProduct(image, title, description, productPrice) {
 	const response = await fetch(url, options)
 	const statusObject = await response.json()
 	console.log('Response from API:', statusObject)
-	if(statusObject.stats === 'success' ) {
+	if(statusObject.status === 'success' ) {
 		return true; 
 	} else {
 		return false; 

@@ -1,20 +1,21 @@
 
 //url på adminpage 
 function isValidUrl(fullUrl) {
-	if(fullUrl.length < 7) {
-		return [false, 'Vänligen fyll i adressen med 7 bokstäver'];
+	const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+  
+	if (fullUrl.length < 7) {
+	  return { isValid: false, message: 'Vänligen fyll i adressen med 7 bokstäver' };
 	}
-	const allowSymbolUrl = '0123456789abcdefghijklmnopqristuvwxyzåäö?!,.& =/_:'
-	for(let i = 0; i < fullUrl.length; i++ ) {
-		let s = fullUrl.charAt(i)
-		if(!allowSymbolUrl.includes(s) ) {
-			console.log('Isvalid url: ' + s)
-			return [false, 'Vänlig använd giltiga tecken tack!']
-		}
+  
+	if (!urlRegex.test(fullUrl)) {
+	  return { isValid: false, message: 'Vänlig använd giltiga tecken tack!' };
 	}
-	return [true, '']
-}
+  
+	return { isValid: true, message: '' };
+  }
 
+
+//namnet på prodkukten 
 function isValidProductName(productName) {
 	if (productName.length < 3 ) {
 		return [false, 'Minst 3 tecken tack.']; 
@@ -51,7 +52,7 @@ function isValidProductPrice(productPrice) {
 	}
 	const allowNumberPrice = '0123456789'
 	for(let i=0; i < productPrice.length; i++) {
-		let r = fullPrice.charAt(i) 
+		let r = productPrice.charAt(i) 
 		if(!allowNumberPrice.includes(r) ) {
 			console.log('Isvalid price: ' + r)
 			return [false, 'Vänligen använd siffor tack']
