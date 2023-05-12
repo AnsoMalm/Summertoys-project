@@ -6,7 +6,7 @@ import ProductDetails from "./routes/ProductInfo.jsx";
 import ShoppingCart from "./routes/ShoppingCart.jsx";
 import AdminLogin from "./routes/AdminLogin.jsx";
 import Admin from "./routes/Admin.jsx";
-import AdminProducts from "./routes/AdminProducts.jsx";
+import AdminProducts, {loader as LoadProduct } from "./routes/AdminProducts.jsx";
 import AdminUsers from "./routes/AdminUsers.jsx";
 
 
@@ -48,7 +48,8 @@ export const router = createHashRouter([
 					},
 					{
 						path: 'admin-products',
-						element: <AdminProducts />
+						element: <AdminProducts />,
+						loader: LoadProduct,
 					}
 				]
 			}

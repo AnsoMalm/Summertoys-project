@@ -1,8 +1,13 @@
-import React, { useState } from "react"
+import React, { useState} from "react"
 // import { isValidProductName, isValidProductDescription, isValidUrl, isValidProductPrice } from "../utils/validatorAdminForm";
 import { addProduct } from "../data/addProduct";
+import { getProducts } from "../data/getProduct";
+import { useLoaderData, Link } from "react-router-dom";
+
+export const loader = () => getProducts()
 
 const AdminProducts = () => {
+	const productData = useLoaderData();
 	//Image -url
 	const [image, setImage] = useState('');
 	const [imageValid, setImageValid] = useState(true);
@@ -133,8 +138,25 @@ const AdminProducts = () => {
 					{!priceValid && <div className="error-message-admin">{priceError}</div> }
 
 				<button className="adminFormBtn" onClick={handleSubmit}>Lägg till</button>
-
 			</form>
+			<div className="grid-container">
+				{productData.map(({id, name, picture, price }) => (
+					<div className="product" key={id}> 
+						<img 
+							className="products-pic"
+							src={picture}
+						/>
+						<p className="products-title">{name}</p>
+						<Link>Mer info om produkt</Link>
+						<div className="products-price">
+							<p className="price"> {price} kr</p>
+						</div>
+							<button
+							className="remove-button">Ta bort</button>
+					</div>
+				))}
+
+			</div>
 		</section>
 	)
 }

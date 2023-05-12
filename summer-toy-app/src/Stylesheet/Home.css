@@ -6,13 +6,14 @@ p {
 
 /*Photo up*/
 .summer-picture {
-	width: 90%; 
+	min-width: 90%; 
 	height: 90%; 
 	margin: 0.3em; 
 }
 
 /*Photo of the girl*/
 .girl-swimsuit {
+	width: 90% ; 
 	height: 100%; 
 	border-radius: 20px;
 
@@ -31,6 +32,14 @@ p {
 	justify-content: center;
 	align-items: center;
 
+}
+
+.photo-container-girl {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0.1em;  
 }
 
 .text-container {
