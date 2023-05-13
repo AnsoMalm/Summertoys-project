@@ -11,13 +11,12 @@ const Home = () => {
 	
 	return (
 		<main>
-		<article>
-			<h1>Leksaker till stranden</h1>
-				<p>Vi har det mesta inom strandutflykten.</p>
+		<article className='article-container'>
 				<img src={Summerheading} alt="letters of summer around stuff of summerpicture" className='summer-picture'
 				/>
-				<p>Strandleksaker för lata dagar i solen.</p>
-				<p>Vi har olika leksaker att erbjuda för strandbesöket både för stora och små.</p>
+					<h1>Strandleksprodukter för härliga dagar </h1>
+					<p className='info-container'>Vi har det mesta för strandutflykten. Vi erbjuder olika sommarleksaker med bästa kvalité på våra alla produkter. </p>
+		
 		</article>
 		<section className="section-container">
 			<div className="photos">

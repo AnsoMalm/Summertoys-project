@@ -11,7 +11,7 @@ body {
 
 h1 {
   text-align: center;
-  margin: 1em 1em; 
+  margin: 0.8em 0.5em; 
 }
 
 section {
@@ -21,6 +21,12 @@ section {
 	align-items: center;
  }
 
+ /* img {
+	padding: 1em; 
+	margin: 0.2em;
+	width: 200px; 
+	height: 150px; 
+}  */
 
 
 

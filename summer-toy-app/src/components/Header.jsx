@@ -9,7 +9,7 @@ const Header = () => {
 	return (
 		<header>
 			<div className="head-container-widescreen">
-				<h1 className="heading">Strandleksparadiset</h1>		
+				<h1 className="loggan">Strandleksparadiset</h1>		
 				<div className="nav-länkar">
 						<NavLink to="products">Våra Produkter</NavLink>
 						<NavLink to="cart">Varukorg</NavLink>
