@@ -70,3 +70,7 @@
 	border-color: red;
   }
 
+  .submit-message {
+	margin-top: 1em;
+	font-style: italic;
+  }

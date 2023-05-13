@@ -9,6 +9,7 @@ export const loader = () => getProducts()
 
 const AdminProducts = () => {
 	const productData = useLoaderData();
+	const [submitMessage, setSubmitMessage] = useState('');
 	//Image -url
 	const [image, setImage] = useState('');
 	const [imageValid, setImageValid] = useState(true);
@@ -71,12 +72,19 @@ const AdminProducts = () => {
 	  };
 
 
-	const handleSubmit = () => {
-		event.preventDefault()
-		addProduct(image, title, description, productPrice)
-
-		//skicka datan till servern 
-	} 
+	  const handleSubmit = async (event) => {
+		event.preventDefault();
+		if (imageValid && titleValid && descriptionValid && priceValid) {
+			try {
+				await addProduct(image, title, description, productPrice);
+				setSubmitMessage('Nu är produkten upplagd. Ladda om sidan tack!');
+			} catch (error) {
+				setSubmitMessage('Något gick fel, försök igen senare.');
+			}
+		} else {
+			setSubmitMessage('Kontrollera att alla fält är korrekt ifyllda.');
+		}
+	};
 
 	const handleDelete = async (productId) => {
 		await deleteOneProduct(productId);
@@ -146,6 +154,7 @@ const AdminProducts = () => {
 					{!priceValid && <div className="error-message-admin">{priceError}</div> }
 
 				<button className="adminFormBtn" onClick={handleSubmit}>Lägg till</button>
+				<div className="submit-message">{submitMessage}</div>
 			</form>
 			<div className="grid-container">
 				{productData.map(({id, name, picture, price }) => (
@@ -163,7 +172,6 @@ const AdminProducts = () => {
 							className="remove-button" onClick={() => handleDelete(id)}>Ta bort</button>
 					</div>
 				))}
-
 			</div>
 		</section>
 	)

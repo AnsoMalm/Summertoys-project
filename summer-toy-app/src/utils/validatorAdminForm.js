@@ -34,7 +34,7 @@ export function isValidProductDescription(productDescription) {
     if (productDescription.length < 10 || productDescription.length > 100) {
         return [false, 'Minst 10 och max 100 tecken tack.'];
     }
-    const allowSymbol = ' 0123456789abcdefghijklmnopqristuvwxyzåäö?!,. '
+    const allowSymbol = ' 0123456789abcdefghijklmnopqristuvwxyzåäö?/:!,.'
     for(let i = 0; i < productDescription.length; i++ ) {
         let s = productDescription.charAt(i)
         if(!allowSymbol.includes(s) ) {
