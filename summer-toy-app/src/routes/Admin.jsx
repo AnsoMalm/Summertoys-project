@@ -10,7 +10,7 @@ const Admin = () => {
 			</Link>
 			<p className="choice-heading">Välj mellan följande val:</p>
 		<div className="admin-links">
-			<Link to="admin-products">Produkt-sidan</Link>
+			<Link to="products">Produkt-sidan</Link>
 			<Link to="users">Admin användarsidan</Link>
 		</div>
 		<Outlet />

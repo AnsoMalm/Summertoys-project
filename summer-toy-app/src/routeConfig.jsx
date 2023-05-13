@@ -47,7 +47,7 @@ export const router = createHashRouter([
 						element: <AdminUsers />
 					},
 					{
-						path: 'admin-products',
+						path: 'products',
 						element: <AdminProducts />,
 						loader: LoadProduct,
 					}

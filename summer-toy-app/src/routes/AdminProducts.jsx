@@ -19,7 +19,8 @@ const AdminProducts = () => {
 	  };
 	
 	  const handleImageBlur = () => {
-		const [isValid, message] = isValidUrl(image);
+		console.log('isvalidUrl', isValidUrl)
+		const {isValid, message} = isValidUrl(image);
 		setImageValid(isValid);
 		setImageError(message);
 	  };
@@ -34,8 +35,8 @@ const AdminProducts = () => {
 	  };
 	
 	  const handleTitleBlur = () => {
-		const [isValid, errorMessage] = isValidProductName(title);
-		setTitleValid(isValid);
+		const [titleValid, errorMessage] = isValidProductName(title);
+		setTitleValid(titleValid);
 		setTitleError(errorMessage);
 	  };
 	
@@ -48,11 +49,11 @@ const AdminProducts = () => {
 		setDescription(event.target.value);
 	  };
 	
-	  const handleDiscriptionBlur = () => {
-		const [isValid, errorMessage] = isValidProductDescription(title);
-		setDescriptionValid(isValid);
+	  const handleDescriptionBlur = () => {
+		const [descriptionValid, errorMessage] = isValidProductDescription(description);
+		setDescriptionValid(descriptionValid);
 		setDescriptionError(errorMessage);
-	  };
+	};
 
 	//ProductPrice
 	const [productPrice, setProductPrice] = useState('');
@@ -64,8 +65,8 @@ const AdminProducts = () => {
 	  };
 	
 	  const handlePriceBlur = () => {
-		const [isValid, errorMessage] = isValidProductPrice(title);
-		setPriceValid(isValid);
+		const [priceValid, errorMessage] = isValidProductPrice(productPrice);
+		setPriceValid(priceValid);
 		setPriceError(errorMessage);
 	  };
 
@@ -98,7 +99,7 @@ const AdminProducts = () => {
 						onChange={handleImageChange}
 						onBlur={handleImageBlur}
 						placeholder="http://..."
-						className="admin-input"
+						className={`admin-input ${imageValid !== null && (imageValid ? "valid-input" : "invalid-input")}`}
 					/>
 				</div>
 					{!imageValid && <div className="error-message-admin">{imageError}</div>}
@@ -111,7 +112,7 @@ const AdminProducts = () => {
 						onChange={handleTitleChange}
 						onBlur={handleTitleBlur}
 						placeholder="Namnet på produkten"
-						className="admin-input"
+						className={`admin-input ${titleValid !== null && (titleValid ? "valid-input" : "invalid-input")}`}
 					/>
 				</div>
 					{!titleValid && <div className="error-message-admin">{titleError}</div> }
@@ -122,10 +123,11 @@ const AdminProducts = () => {
 						type="text"
 						value={description}
 						onChange={handleDescriptionChange}
-						onBlur={handleDiscriptionBlur}
+						onBlur={handleDescriptionBlur}
 						placeholder="Beskrivning av er produkt..."
 						cols="30"
 						rows="10"
+						className={`${descriptionValid !== null && (descriptionValid ? "valid-input" : "invalid-input")}`}
 					/>
 				</div>
 					{!descriptionValid && <div className="error-message-admin">{descriptionError}</div>}
@@ -137,8 +139,8 @@ const AdminProducts = () => {
 						value={productPrice}
 						onChange={handlePriceChange}
 						onBlur={handlePriceBlur}
-						placeholder="ex. 121"
-						className="admin-input-price"
+						placeholder="ex. 98"
+						className={`admin-input-price ${priceValid !== null && (priceValid ? "valid-input" : "invalid-input")}`}
 					/>
 				</div>
 					{!priceValid && <div className="error-message-admin">{priceError}</div> }
