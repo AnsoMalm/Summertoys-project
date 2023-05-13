@@ -20,7 +20,7 @@ const ProductDetails = () => {
 	
 	return (
 		<section className="product-detail-container">
-				<h1>Produktinformation</h1>
+				<h1>Produkt information</h1>
 				<div className="product-detail">
 					<img className="product-img" src={product.picture} />
 					<h2 className="product-name">{product.name}</h2>

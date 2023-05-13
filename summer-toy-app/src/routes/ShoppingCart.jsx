@@ -43,16 +43,16 @@ const ShoppingCart = () => {
 						<div className="product-container" key={id}>
 							<img className="product-image" src={product.picture} alt={product.name} />
 							<h3 className="heading-cart">{product.name}</h3>
-							<FontAwesomeIcon
-							className="minus-icon" 
-							icon={faMinus}
-							onClick={() => removeProduct(product.id)} />
+								<FontAwesomeIcon
+								className="minus-icon" 
+								icon={faMinus}
+								onClick={() => removeProduct(product.id)} />
 							<p className="product-number">{product.amount}</p>
-							<FontAwesomeIcon 
-							className="plus-icon"
-							icon={faPlus}
-							/>
-						<h4 className="price-heading">Pris:</h4>
+								<FontAwesomeIcon 
+								className="plus-icon"
+								icon={faPlus}
+								/>
+						<h4 className="price-heading">Totalpris:</h4>
 						<p className="price-produkt">{product.price * product.amount} kr</p>
 						</div>))}
 				<div className="total-price-container">
