@@ -53,6 +53,8 @@
 
 .buy-button:hover {
 	background-color: #94E4C2;
+	cursor: pointer;
+	color: black;
 }
 
 

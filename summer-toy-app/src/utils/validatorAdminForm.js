@@ -36,7 +36,7 @@ export function isValidProductDescription(productDescription) {
     }
     const allowSymbol = ' 0123456789abcdefghijklmnopqristuvwxyzåäö?/:!,.'
     for(let i = 0; i < productDescription.length; i++ ) {
-        let s = productDescription.charAt(i)
+        let s = productDescription.charAt(i).toLowerCase()
         if(!allowSymbol.includes(s) ) {
             return [false, 'Vänligen använd bara bokstäver och siffor']
         }

@@ -101,6 +101,12 @@
 	border-radius: 10px; 
 }
 
+.pay-button:hover {
+	background-color: #94E4C2;
+	cursor: pointer;
+	color: black;
+}
+
 
 .back-button {
 	margin: 1em; 
