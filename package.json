@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://AnsoMalm.github.io/Summertoys-project",
+  "homepage": "https://AnsoMalm.github.io/summer-toy.-app",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
