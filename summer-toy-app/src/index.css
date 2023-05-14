@@ -1,9 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
   padding: 0; 
   margin: 0; 
 }
 
-header {
-  background-color: #94E4C2;
-  padding: 2em; 
+body {
+  font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+  text-align: center;
+  margin: 0.8em 0.5em; 
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+ }
+
+ /* img {
+	padding: 1em; 
+	margin: 0.2em;
+	width: 200px; 
+	height: 150px; 
+}   */
+
+
+
+
+
+

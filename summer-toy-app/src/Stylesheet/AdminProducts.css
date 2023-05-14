@@ -1,0 +1,76 @@
+
+.admin-form-title {
+	padding: 0.3em; 
+}
+
+.adminFormBtn, .remove-button {
+	padding: 0.5em 1em; 
+	border-radius: 10px;
+	border: 1px solid rgb(191, 185, 185);
+	background-color: #cccdcb;
+	cursor: pointer;
+}
+
+.adminFormBtn {
+	margin-left: 1em; 
+}
+
+
+.admin-container {
+	margin-top: 1.5em;
+	background-color: #dee9e4;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 4em 2em;  
+	width: 20em; 
+	height: 30em; 
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.admin-heading {
+	font-weight: bold;
+}
+
+.admin-input {
+	padding: 0.5em;
+	width: 125%;  
+}
+
+
+.admin-input-price {
+	padding: 0.8em;
+	width: 50%;  
+}
+
+.admin-form {
+	padding: 0.4em; 
+	margin: 0.3em; 
+}
+
+.admin-form textarea {
+	resize: none; 
+}
+
+.error-message-admin { 
+	color: red;
+	font-size: 13px;
+	margin-left: 1em; 
+	margin-top: 5px; 
+	min-height: 18px; 
+
+}
+
+.valid-input {
+	border-color: green;
+  }
+  
+  .invalid-input {
+	border-color: red;
+  }
+
+  .submit-message {
+	margin-top: 1em;
+	font-style: italic;
+  }
